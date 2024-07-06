@@ -1,0 +1,14 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Sachin Chavan
+theme: PaperMod
+
+params:
+  defaultTheme: dark
+  homeInfoParams:
+    Title: "Hi there \U0001F44B"
+    Content: >-
+      Welcome to my blog.      
+  socialIcons:
+    - name: email
+      url: 'mailto:hey@sachinsmc.me'
