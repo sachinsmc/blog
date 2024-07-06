@@ -5,7 +5,7 @@ theme: PaperMod
 
 services:
   googleAnalytics:
-    id: G-GKHL436Z98
+    id: G-FLTSBS6TSY
 
 params:
   defaultTheme: dark
