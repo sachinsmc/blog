@@ -3,9 +3,9 @@ languageCode: en-us
 title: Sachin Chavan
 theme: PaperMod
 
-services:
-  googleAnalytics:
-    id: G-FLTSBS6TSY
+# services:
+#   googleAnalytics:
+#     id: G-FLTSBS6TSY
 
 params:
   defaultTheme: dark
