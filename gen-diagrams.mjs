@@ -153,4 +153,35 @@ ${boxes.map(box).join("\n")}
   writeFileSync("content/blog/multi-tenant-rag-authorization-boundary/decision-flow.excalidraw", scene(els));
 }
 
-console.log("wrote 2 .svg + 2 .excalidraw");
+// ============ Diagram 3: TurboQuant pipeline ============
+{
+  const W = 640, H = 560, cx = 320;
+  const boxes = [
+    { id: "in", x: cx - 150, y: 30, w: 300, h: 54, role: "client", label: "Input vectors\nKV cache / embeddings" },
+    { id: "rot", x: cx - 160, y: 138, w: 320, h: 58, role: "core", label: "Random rotation (Qx)\nisotropic geometry, data-free" },
+    { id: "polar", x: cx - 160, y: 250, w: 320, h: 58, role: "node", label: "PolarQuant\nradius + angles, 3-4 bit, ~no constants" },
+    { id: "qjl", x: cx - 160, y: 362, w: 320, h: 58, role: "node", label: "QJL residual\n1-bit sign projections, 0 overhead" },
+    { id: "out", x: cx - 150, y: 474, w: 300, h: 56, role: "good", label: "Compressed code\n3-4 bits/value, >=6x smaller, training-free" },
+  ];
+  const arrows = [
+    { x1: cx, y1: 84, x2: cx, y2: 136, role: "n" },
+    { x1: cx, y1: 196, x2: cx, y2: 248, role: "n", label: "looks Gaussian", lx: cx + 10, ly: 226, anchor: "start" },
+    { x1: cx, y1: 308, x2: cx, y2: 360, role: "n", label: "small residual", lx: cx + 10, ly: 338, anchor: "start" },
+    { x1: cx, y1: 420, x2: cx, y2: 472, role: "good" },
+  ];
+  writeFileSync("content/blog/turboquant-data-free-quantization/pipeline.svg",
+    svg(W, H, boxes, arrows, "TurboQuant two-stage pipeline"));
+
+  seq = 0; nonce = 3000;
+  const els = [];
+  for (const b of boxes) {
+    const p = PALETTE[b.role];
+    els.push(rect(b.x, b.y, b.w, b.h, p.stroke, p.fill));
+    els.push(text(b.x, b.y + b.h / 2 - 10, b.w, b.label, p.text, 14));
+  }
+  for (const a of arrows) els.push(arrow(a.x1, a.y1, a.x2 - a.x1, a.y2 - a.y1,
+    a.role === "good" ? "#16a34a" : "#64748b", a.dashed));
+  writeFileSync("content/blog/turboquant-data-free-quantization/pipeline.excalidraw", scene(els));
+}
+
+console.log("wrote 3 .svg + 3 .excalidraw");
