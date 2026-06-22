@@ -49,6 +49,8 @@ The whole thing is the Go standard library and nothing else. Let me start with t
 
 ## Failover before the first byte
 
+{{< figure src="failover-flow.svg" alt="Client posts to llm-relay, which tries the primary provider, fails over to a fallback on 429/5xx/down, and streams SSE back to the client" caption="The relay tries the primary, fails over on 429/5xx/unreachable, and only then streams back. The switch happens before any bytes reach the client." >}}
+
 Here is the subtle bug in most hand-rolled LLM proxies. They start streaming the response to the client, and only when the upstream errors do they try a fallback. But by then the client has already received part of an SSE stream. You cannot cleanly switch now: the caller has half a response from model A, and you are about to append tokens from model B. The result is a corrupted turn.
 
 `llm-relay` avoids this by making failover happen entirely before it returns the stream to the transport. The core loop, in `StartStream`:
