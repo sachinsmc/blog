@@ -1,6 +1,6 @@
 +++
 title = "Separations and the Tail: A Field Guide to Distributed Backend Design"
-date = 2026-06-23
+date = 2026-06-22T21:00:00+04:00
 draft = false
 summary = "Most of what makes a distributed system good is a handful of disciplined separations plus a real respect for the tail. To make that concrete, we design a small identity graph service from scratch, the same shape of system Airbnb runs at 7 billion nodes, and watch each principle earn its place. Node.js snippets included."
 tags = ["distributed-systems", "backend", "architecture", "system-design", "scalability"]

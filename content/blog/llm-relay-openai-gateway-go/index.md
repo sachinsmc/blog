@@ -1,6 +1,6 @@
 +++
 title = "Failover Before the First Byte: An OpenAI-Compatible LLM Gateway in Pure Go"
-date = 2026-06-23
+date = 2026-06-22T20:00:00+04:00
 draft = false
 summary = "I just shipped llm-relay, a small OpenAI-compatible LLM gateway in pure Go (zero third-party dependencies). The interesting part is the failover: when a provider is rate-limited or down, it switches to the next one BEFORE any bytes reach the client, so the caller never sees half a stream and then a different model. Here is how it works, with the real code."
 tags = ["go", "llm", "openai", "infrastructure", "streaming", "open-source"]

@@ -1,6 +1,6 @@
 +++
 title = "The Overhead Is the Story: My Take on Google's TurboQuant"
-date = 2026-06-23
+date = 2026-06-22T20:40:00+04:00
 draft = false
 summary = "Google's TurboQuant compresses LLM KV caches and embedding vectors to 3-4 bits with no training and no codebook, and still beats methods that need both. The clever part is not the quantizer, it is what it refuses to store. Here is the intuition, with runnable NumPy you can paste and check."
 tags = ["ml", "quantization", "llm", "vector-search", "efficiency", "ai"]

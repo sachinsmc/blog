@@ -1,6 +1,6 @@
 +++
 title = "Every Retrieval Is an Authorization Decision: Multi-Tenant RAG Done Safely"
-date = 2026-06-23
+date = 2026-06-22T20:20:00+04:00
 draft = false
 summary = "In a single-tenant RAG you trust the index. In a multi-tenant one, a shared index plus one missing filter leaks Tenant A's documents into Tenant B's answer. Here is the unified mental model that ties the metadata-filtering mechanics and the authorization layer together, treat the tenant filter as a policy decision, not app code, with the same architecture mapped across AWS, Azure, and Google Cloud (diagrams and Python included)."
 tags = ["rag", "security", "aws", "azure", "gcp", "bedrock", "authorization", "ai"]
