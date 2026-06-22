@@ -184,4 +184,45 @@ ${boxes.map(box).join("\n")}
   writeFileSync("content/blog/turboquant-data-free-quantization/pipeline.excalidraw", scene(els));
 }
 
-console.log("wrote 3 .svg + 3 .excalidraw");
+// ============ Diagram 4: read/write path architecture ============
+{
+  const W = 820, H = 470;
+  const boxes = [
+    // write path (left to center)
+    { id: "src", x: 30, y: 40, w: 150, h: 56, role: "client", label: "Producers\nsignups, logins, devices" },
+    { id: "stream", x: 30, y: 150, w: 150, h: 50, role: "node", label: "Event stream\n(Kafka)" },
+    { id: "ingest", x: 30, y: 258, w: 150, h: 56, role: "core", label: "Ingestion\nidempotent upsert" },
+    // core store
+    { id: "store", x: 320, y: 150, w: 180, h: 70, role: "core", label: "Graph store\ncompute / persistence split" },
+    { id: "cache", x: 340, y: 285, w: 140, h: 48, role: "node", label: "KV cache\nhot subgraphs" },
+    // read path (center to right)
+    { id: "api", x: 640, y: 40, w: 150, h: 50, role: "client", label: "Read API\n/resolve, /neighbors" },
+    { id: "rcompute", x: 640, y: 150, w: 150, h: 70, role: "core", label: "Read service\nparallel fan-out" },
+    { id: "client2", x: 640, y: 285, w: 150, h: 48, role: "good", label: "Trust & Safety\nconsumers" },
+  ];
+  const arrows = [
+    { x1: 105, y1: 96, x2: 105, y2: 148, role: "n" },
+    { x1: 105, y1: 200, x2: 105, y2: 256, role: "n" },
+    { x1: 180, y1: 282, x2: 318, y2: 200, role: "n", label: "writes", ly: 232 },
+    { x1: 410, y1: 220, x2: 410, y2: 283, role: "n", label: "warm", lx: 420, ly: 256, anchor: "start" },
+    { x1: 715, y1: 90, x2: 715, y2: 148, role: "n" },
+    { x1: 638, y1: 185, x2: 502, y2: 185, role: "good", label: "reads", ly: 177 },
+    { x1: 488, y1: 305, x2: 638, y2: 305, role: "n", dashed: true, label: "cache hit", ly: 297 },
+    { x1: 715, y1: 220, x2: 715, y2: 283, role: "good" },
+  ];
+  const note = { id: "n2", x: 235, y: 392, w: 350, h: 38, role: "good", label: "write path and read path scale independently" };
+  writeFileSync("content/blog/distributed-systems-field-guide/architecture.svg",
+    svg(W, H, [...boxes, note], arrows, "read/write path architecture"));
+  seq = 0; nonce = 4000;
+  const els = [];
+  for (const b of [...boxes, note]) {
+    const p = PALETTE[b.role];
+    els.push(rect(b.x, b.y, b.w, b.h, p.stroke, p.fill));
+    els.push(text(b.x, b.y + b.h / 2 - 10, b.w, b.label, p.text, 13));
+  }
+  for (const a of arrows) els.push(arrow(a.x1, a.y1, a.x2 - a.x1, a.y2 - a.y1,
+    a.role === "good" ? "#16a34a" : "#64748b", a.dashed));
+  writeFileSync("content/blog/distributed-systems-field-guide/architecture.excalidraw", scene(els));
+}
+
+console.log("wrote 4 .svg + 4 .excalidraw");
