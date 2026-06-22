@@ -1,0 +1,82 @@
+baseURL: https://sachinsmc.me/
+title: Sachin Chavan
+theme: PaperMod
+languageCode: en-us
+
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: true
+pygmentsUseClasses: true
+
+services:
+  googleAnalytics:
+    id: G-GKHL436Z98
+
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  defaultTheme: dark
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  displayFullLangName: true
+  description: "Sachin Chavan, Software Engineer in Dubai. Full-stack (Go, Node.js, Python, React) and DevOps across AWS, GCP, Azure, and Oracle, with a focus on cybersecurity, AI/ML, and blockchain. Writing about engineering, AI, and security."
+
+  homeInfoParams:
+    Title: "Hi, I'm Sachin \U0001F44B"
+    Content: >
+      Software Engineer at ReasonSoftware in Dubai. I work across the stack in Go,
+      Node.js, Python, and React, with DevOps on AWS, GCP, Azure, and Oracle Cloud,
+      and a focus on cybersecurity, AI/ML, and blockchain. I write about what I build
+      and learn along the way.
+
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/sachinsmc"
+    - name: x
+      title: X (Twitter)
+      url: "https://x.com/smcsachin"
+    - name: rss
+      title: RSS
+      url: "/index.xml"
+    - name: email
+      title: Email
+      url: "mailto:hey@sachinsmc.me"
+
+  label:
+    text: "Sachin Chavan"
+
+menu:
+  main:
+    - identifier: posts
+      name: Blog
+      url: /posts/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40
