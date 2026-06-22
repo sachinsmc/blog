@@ -11,7 +11,7 @@ hideMeta = true
 
 Hi, I'm **Sachin Chavan**, a Software Engineer at [ReasonSoftware](https://github.com/ReasonSoftware) based in **Dubai, UAE**.
 
-I build backends and developer tools, mostly in **Go** and **Node.js**, and I care a lot about clean systems, learning continuously, and self-improvement.
+I work across the stack, in **Go**, **Node.js**, **Python**, and **React**, with **DevOps** across **AWS**, **GCP**, **Azure**, and **Oracle Cloud**. I care a lot about clean systems, learning continuously, and self-improvement.
 
 ## What I work on
 
@@ -25,7 +25,7 @@ Most of my open-source work lives on [GitHub](https://github.com/sachinsmc). A f
 
 ## On this blog
 
-I write about backend engineering, Go and Node.js, security, and lessons from things that went sideways. If a post saves you from a mistake I made, it did its job.
+I write about engineering across the stack, from backends and infrastructure to AI, cloud, and security, plus lessons from things that went sideways. If a post saves you from a mistake I made, it did its job.
 
 ## Get in touch
 

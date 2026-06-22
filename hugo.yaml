@@ -35,13 +35,14 @@ params:
   ShowWordCount: true
   ShowRssButtonInSectionTermList: true
   displayFullLangName: true
-  description: "Sachin Chavan, Software Engineer in Dubai. Writing about backend engineering, Go, Node.js, and security."
+  description: "Sachin Chavan, Software Engineer in Dubai. Full-stack and DevOps across Go, Node.js, Python, React, and AWS / GCP / Azure / Oracle. Writing about engineering, AI, cloud, and security."
 
   homeInfoParams:
     Title: "Hi, I'm Sachin \U0001F44B"
     Content: >
-      Software Engineer at ReasonSoftware in Dubai, building backends in Go and Node.js.
-      I write about engineering, security, and the things I learn along the way.
+      Software Engineer at ReasonSoftware in Dubai. I work across the stack in Go,
+      Node.js, Python, and React, with DevOps on AWS, GCP, Azure, and Oracle Cloud.
+      I write about engineering, AI, cloud, security, and the things I learn along the way.
 
   socialIcons:
     - name: github
