@@ -1,18 +1,80 @@
-baseURL: https://example.org/
-languageCode: en-us
+baseURL: https://sachinsmc.me/
 title: Sachin Chavan
 theme: PaperMod
+languageCode: en-us
+
+enableRobotsTXT: true
+enableEmoji: true
+buildDrafts: false
+buildFuture: false
+pygmentsUseClasses: true
 
 services:
   googleAnalytics:
     id: G-GKHL436Z98
 
+minify:
+  disableXML: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
 params:
   defaultTheme: dark
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowCodeCopyButtons: true
+  ShowToc: true
+  TocOpen: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  displayFullLangName: true
+  description: "Sachin Chavan, Software Engineer in Dubai. Writing about backend engineering, Go, Node.js, and security."
+
   homeInfoParams:
-    Title: "Hi there \U0001F44B"
-    Content: >-
-      Welcome to my blog.      
+    Title: "Hi, I'm Sachin \U0001F44B"
+    Content: >
+      Software Engineer at ReasonSoftware in Dubai, building backends in Go and Node.js.
+      I write about engineering, security, and the things I learn along the way.
+
   socialIcons:
+    - name: github
+      title: GitHub
+      url: "https://github.com/sachinsmc"
+    - name: x
+      title: X (Twitter)
+      url: "https://x.com/smcsachin"
+    - name: rss
+      title: RSS
+      url: "/index.xml"
     - name: email
-      url: 'mailto:hey@sachinsmc.me'
+      title: Email
+      url: "mailto:hey@sachinsmc.me"
+
+  label:
+    text: "Sachin Chavan"
+
+menu:
+  main:
+    - identifier: blog
+      name: Blog
+      url: /blog/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 30
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 40

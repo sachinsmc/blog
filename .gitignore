@@ -1,0 +1,7 @@
+# Hugo build output (CI rebuilds this from source on deploy)
+/public/
+/resources/
+.hugo_build.lock
+
+# OS / editor cruft
+.DS_Store
