@@ -11,21 +11,22 @@ hideMeta = true
 
 Hi, I'm **Sachin Chavan**, a Software Engineer at [ReasonSoftware](https://github.com/ReasonSoftware) based in **Dubai, UAE**.
 
-I work across the stack, in **Go**, **Node.js**, **Python**, and **React**, with **DevOps** across **AWS**, **GCP**, **Azure**, and **Oracle Cloud**. I care a lot about clean systems, learning continuously, and self-improvement.
+I work across the stack, in **Go**, **Node.js**, **Python**, and **React**, with **DevOps** across **AWS**, **GCP**, **Azure**, and **Oracle Cloud**. My focus is **cybersecurity**, **AI/ML**, and **blockchain**, and I care a lot about clean systems, learning continuously, and self-improvement.
 
 ## What I work on
 
-Most of my open-source work lives on [GitHub](https://github.com/sachinsmc). A few things I've built:
+Day to day I work in **Go**, **Node.js**, and **Python**, with **React** on the front end. A sample of my open-source work, across languages:
 
-- **[shodan](https://github.com/sachinsmc/shodan)**, a CLI for interacting with the Shodan API _(Go)_
 - **[llm-relay](https://github.com/sachinsmc/llm-relay)**, an OpenAI-compatible LLM gateway with provider failover _(Go)_
-- **[turbo-fmt-println](https://github.com/sachinsmc/turbo-fmt-println)**, a VS Code extension that automates debug logging in Go _(TypeScript)_
+- **[shodan](https://github.com/sachinsmc/shodan)**, a CLI for interacting with the Shodan API _(Go)_
+- **[ethblock-store](https://github.com/sachinsmc/ethblock-store)**, an Ethereum block-detail store _(Node.js)_
+- **[turbo-fmt-println](https://github.com/sachinsmc/turbo-fmt-println)**, a VS Code extension that automates debug logging _(TypeScript)_
 - **[mood-tune](https://github.com/sachinsmc/mood-tune)**, mood-based music playback on the Spotify API _(Go)_
 - **[gitgrab](https://github.com/sachinsmc/gitgrab)**, download individual folders from any Git repository _(Go)_
 
 ## On this blog
 
-I write about engineering across the stack, from backends and infrastructure to AI, cloud, and security, plus lessons from things that went sideways. If a post saves you from a mistake I made, it did its job.
+I write about engineering across the stack, from backends and infrastructure to AI, cloud, and security, plus lessons from things that went sideways. The posts span the languages I actually use: **Go** in the [llm-relay writeup](/blog/llm-relay-openai-gateway-go/), **Python** in the [TurboQuant](/blog/turboquant-data-free-quantization/) and [multi-tenant RAG](/blog/multi-tenant-rag-authorization-boundary/) pieces, and **Node.js** in the [distributed systems guide](/blog/distributed-systems-field-guide/). If a post saves you from a mistake I made, it did its job.
 
 ## Get in touch
 

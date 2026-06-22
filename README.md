@@ -2,8 +2,8 @@
 
 Source for my personal blog at [sachinsmc.me](https://sachinsmc.me), built with
 [Hugo](https://gohugo.io) and the [PaperMod](https://github.com/adityatelange/hugo-PaperMod)
-theme. I write about engineering across the stack: backends, infrastructure, AI,
-cloud, and security.
+theme. I work across the stack in Go, Node.js, and Python, and write about
+engineering, AI/ML, cloud, security, and blockchain.
 
 ## Stack
 
